@@ -1,0 +1,27 @@
+[submodule "gain_processor"]
+	path = gain_processor
+	url = https://github.com/gpuaudio/gain_processor
+[submodule "simple_processor_launcher"]
+	path = simple_processor_launcher
+	url = https://github.com/gpuaudio/simple_processor_launcher
+[submodule "NeuralAmpModeler/nam_processor"]
+	path = NeuralAmpModeler/nam_processor
+	url = https://github.com/gpuaudio/nam_processor
+[submodule "NeuralAmpModeler/NAMLib"]
+	path = NeuralAmpModeler/NAMLib
+	url = https://github.com/gpuaudio/NAMLib
+[submodule "iir_processor"]
+	path = iir_processor
+	url = https://github.com/gpuaudio/iir_processor
+[submodule "fir_processor"]
+	path = fir_processor
+	url = https://github.com/gpuaudio/fir_processor
+[submodule "GainLib"]
+	path = GainLib
+	url = https://github.com/gpuaudio/GainLib
+[submodule "NeuralAmpModeler/nam_plugin"]
+	path = NeuralAmpModeler/nam_plugin
+	url = https://github.com/gpuaudio/nam_plugin
+[submodule "processor_cmake"]
+	path = processor_cmake
+	url = https://github.com/gpuaudio/processor_cmake
