@@ -12,7 +12,7 @@
 * Visual Studio 2022 with `MSVC v143 - VS 2022 C++ x64/x86 build tools v14.34-17.4` toolchain (should be installed via _Individual Components_ in visual studio installer)
 * cmake 3.26.3+
 * git
-* GPU Audio Platform (TODO: link to gpu.audio)
+* [GPU Audio Platform](https://www.gpu.audio/sdk-binaries)
 
 ### Nvidia-specific prerequisites
 
