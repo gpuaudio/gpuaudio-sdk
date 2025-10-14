@@ -4,7 +4,6 @@
 
 ### Supported Windows versions
 
-* Windows 10 22H2
 * Windows 11 (any)
 
 ### Generic prerequisites
@@ -16,19 +15,27 @@
 
 ### Nvidia-specific prerequisites
 
-* [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
+* [CUDA 12.9](https://developer.nvidia.com/cuda-12-9-0-download-archive)
+* Graphics driver >= 576.2
 
 ### AMD-specific prerequisites
 
-* [HIP 5.5](https://www.amd.com/en/developer/resources/rocm-hub/hip-sdk.html)
+* [HIP 6.4.2](https://www.amd.com/en/developer/resources/rocm-hub/hip-sdk.html)
 * Perl interpreter. [StrawberryPerl](https://strawberryperl.com/)
+* Graphics driver >= 25.10
 
-### Build
+### Prepare build environment
 
 * Clone this repository
 * Initialize submodules `git submodule update --init --recursive`
+
+### Build targeting Nvidia devices
+* Configure with `cmake -S . -B @BUILD -G "Visual Studio 17 2022" -DWITH_HIP:BOOL=false -DCUDA_VERSION="12.9"`
+* Build with `cmake --build @BUILD --config RelWithDebInfo --parallel`
+
+### Build targeting AMD devices
 * Set `PERL_PATH` to the location of your perl interpreter. In case of StrawberryPerl it would be `C:\Strawberry\perl\bin` by default (this step can be skipped if only Nvidia binaries are being built)
-* Configure with `cmake -DCMAKE_GENERATOR_TOOLSET="cuda=11.8" -S . -B @BUILD`
+* Configure with `cmake -S . -B @BUILD -G "Visual Studio 17 2022" -DWITH_CUDA:BOOL=false`
 * Build with `cmake --build @BUILD --config RelWithDebInfo --parallel`
 
 ### Run tests
@@ -57,6 +64,7 @@ Supported macOS versions:
 * macOS 13
 * macOS 14
 * macOS 15
+* macOS 26
 
 ### Prerequisites
 
@@ -73,6 +81,7 @@ In order to build binaries for your local macOS version the appropriate version 
 | macOS 13          |   14.2        | 13.1   | 14    |
 | macOS 14          |   15.0.1      | 14     | 15    |
 | macOS 15          |   16.0        | 15     | 16    |
+| macOS 26          |   26.0.1      | 26     | 17    |
 
 There are many ways managing Xcode versions, recommended way is using [xcodes](https://github.com/XcodesOrg/xcodes)
 
