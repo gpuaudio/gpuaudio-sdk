@@ -285,8 +285,16 @@ As the input data stream crosses a partition boundary, all impulse response and 
 
 
 ### Neural Amp Modeler (NAM)
-The `nam_processor` and `nam_launcher` examples demonstrate how to implement the neural amp model for the GPU.
+The `nam_processor` and `NAMLib` examples demonstrate how to implement the neural amp model for the GPU.
 We provide implementations for the long-short-term memory (LSTM) and Wavenet models, offering two distinct neural network processing examples.
 The LSTM model implements a recurrent neural network (RNN) that keeps state and weights locally in registers and shared memory. 
 The Wavenet model implements a convolutional neural network (CNN) that uses dilated convolutions to increase the receptive field of the network. 
 Both models leverage our matrix and neural processing building blocks.
+
+### Real-Time Sound Source Separation (RT3S)
+The `rt3s_processor` and `RT3SLib` demonstrate how to implement the Sound Source Separation for the GPU.
+The implementation is based on the HS-TasNet paper by Venkatesh et al. [1] and a publicly available python implementation [2] by Phil Wang.
+The processor takes a stereo audio track, the `mixture` of sources, as input an outputs one stereo track for each of the four sources, i.e., `bass`, `drums`, `vocals` and `other`. HS-TasNet is a hybrid approach, which uses time-domain and frequency-domain features to seperate the input into the four sources. Both time and frequency branch as well as the shared layers are built using our neural processing building blocks.
+
+[1] https://www.l-acoustics.com/wp-content/uploads/2024/04/real_time_demixer_2024_04_19.pdf  
+[2] https://github.com/lucidrains/hs-tasnet

@@ -25,3 +25,12 @@
 [submodule "processor_cmake"]
 	path = processor_cmake
 	url = https://github.com/gpuaudio/processor_cmake
+[submodule "SoundSourceSeparation/rt3s_plugin"]
+	path = SoundSourceSeparation/rt3s_plugin
+	url = https://github.com/gpuaudio/rt3s_plugin
+[submodule "SoundSourceSeparation/rt3s_processor"]
+	path = SoundSourceSeparation/rt3s_processor
+	url = https://github.com/gpuaudio/rt3s_processor
+[submodule "SoundSourceSeparation/RT3SLib"]
+	path = SoundSourceSeparation/RT3SLib
+	url = https://github.com/gpuaudio/RT3SLib

@@ -14,6 +14,7 @@ set(PROCESSOR_LIST
     "gain_processor"
     "iir_processor"
     "fir_processor"
+    "SoundSourceSeparation/rt3s_processor"
     "NeuralAmpModeler/nam_processor"
     # Add additional processors here as needed
 )
@@ -22,4 +23,5 @@ add_subdirectory(processor_cmake)
 add_subdirectory(simple_processor_launcher)
 add_subdirectory(NeuralAmpModeler)
 add_subdirectory(GainLib)
+add_subdirectory(SoundSourceSeparation)
 enable_testing()
