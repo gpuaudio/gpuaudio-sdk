@@ -297,4 +297,4 @@ The implementation is based on the HS-TasNet paper by Venkatesh et al. [1] and a
 The processor takes a stereo audio track, the `mixture` of sources, as input an outputs one stereo track for each of the four sources, i.e., `bass`, `drums`, `vocals` and `other`. HS-TasNet is a hybrid approach, which uses time-domain and frequency-domain features to seperate the input into the four sources. Both time and frequency branch as well as the shared layers are built using our neural processing building blocks.
 
 [1] https://www.l-acoustics.com/wp-content/uploads/2024/04/real_time_demixer_2024_04_19.pdf  
-[2] https://github.com/lucidrains/hs-tasnet
+[2] https://gitlab.com/lucidrains/HS-TasNet
