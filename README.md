@@ -291,10 +291,14 @@ The LSTM model implements a recurrent neural network (RNN) that keeps state and 
 The Wavenet model implements a convolutional neural network (CNN) that uses dilated convolutions to increase the receptive field of the network. 
 Both models leverage our matrix and neural processing building blocks.
 
+There is a guide in a form of presentation describing this project available [here](https://github.com/gpuaudio/gpuaudio-sdk/blob/main/Guides/NeuralAmpModeler.pdf)
+
 ### Real-Time Sound Source Separation (RT3S)
 The `rt3s_processor` and `RT3SLib` demonstrate how to implement the Sound Source Separation for the GPU.
 The implementation is based on the HS-TasNet paper by Venkatesh et al. [1] and a publicly available python implementation [2] by Phil Wang.
 The processor takes a stereo audio track, the `mixture` of sources, as input an outputs one stereo track for each of the four sources, i.e., `bass`, `drums`, `vocals` and `other`. HS-TasNet is a hybrid approach, which uses time-domain and frequency-domain features to seperate the input into the four sources. Both time and frequency branch as well as the shared layers are built using our neural processing building blocks.
+
+There is a guide in a form of presentation describing this project available [here](https://github.com/gpuaudio/gpuaudio-sdk/blob/main/Guides/RealtimeSourceSeparation.pdf)
 
 [1] https://www.l-acoustics.com/wp-content/uploads/2024/04/real_time_demixer_2024_04_19.pdf  
 [2] https://gitlab.com/lucidrains/HS-TasNet
